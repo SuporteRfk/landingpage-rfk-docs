@@ -6,7 +6,7 @@ interface WrapperSectionProps {
     margin?:string;
     padding?:string;
     height?:string;
-    idSection:string;
+    idSection?:string;
 }
 
 export const WrapperSection = ({children, colorBg="bg-white", margin, padding, height="h-full", idSection}:WrapperSectionProps) => {
