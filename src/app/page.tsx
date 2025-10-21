@@ -1,5 +1,6 @@
 "use client"
 import { AboutSection, AiDocsSection, Header, HomeSection, HowToUseSection } from "@/components";
+import { Footer } from "@/components/footer";
 import { useEffect } from "react";
 
 
@@ -33,6 +34,7 @@ export default function Home() {
         <AboutSection/>{/* Sobre*/}
         <HowToUseSection/> {/* Sessão de como usar */}        
         <AiDocsSection/>{/* Sessão do agende de AI */}
+        <Footer/>
     </div>
   );
 }
