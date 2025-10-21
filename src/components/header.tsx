@@ -11,25 +11,21 @@ import Image from "next/image";
 const navHeader = [
     {
         Icon: House,
-        url: "/",
         title: "Ínicio",
         idScrollEffect: "home"
     },
     {
         Icon: CircleQuestionMark,
-        url: "/sobre",
         title: "Sobre",
         idScrollEffect: "about"
     },
     {
         Icon: MousePointer,
-        url: "/como-usar",
         title: "Como usar?",
         idScrollEffect: "how-to-use"
     },
     {
         Icon: BrainCircuit,
-        url: "/ai-docs",
         title: "AI Docs",
         idScrollEffect: "agent-ai-docs"
     },
@@ -39,13 +35,13 @@ const navHeader = [
 
 export const Header = () => {
     const [isOpen, setOpen] = useState(false)
-    const currentPathname = usePathname();
+    const [choiceNav, setChoiceNav] = useState("home")
     
-    const scrollEffect = (id:string, url: string) => {
+    const scrollEffect = (id:string) => {
         const section = document.getElementById(id);
         if(section){
             section.scrollIntoView({behavior: "smooth"});
-             window.history.pushState({}, "", url);
+            setChoiceNav(id);
         }
     };
 
@@ -62,9 +58,9 @@ export const Header = () => {
                     {navHeader.map((nav) => (
                         <li key={nav.idScrollEffect}>
                             <button  
-                                onClick={() => scrollEffect(nav.idScrollEffect, nav.url)}
+                                onClick={() => scrollEffect(nav.idScrollEffect)}
                                 className={`flex items-center gap-1 py-1.5 px-2 rounded-sm text-sm
-                                    ${currentPathname === nav.url ? " bg-sky-200 shadow-sky-400 shadow-inner": ""}
+                                    ${choiceNav === nav.idScrollEffect ? " bg-sky-200 shadow-sky-400 shadow-inner": ""}
                                     hover:bg-sky-200 transition
                             `}>
                                 <nav.Icon className="text-sm text-secondary h-5 w-5"/>
@@ -87,11 +83,11 @@ export const Header = () => {
                                 <DropdownMenuItem key={nav.idScrollEffect} asChild>
                                     <a
                                         onClick={() => {
-                                            scrollEffect(nav.idScrollEffect, nav.url);
+                                            scrollEffect(nav.idScrollEffect);
                                             setOpen(false); // fecha o menu ao clicar
                                         }}
                                         className={`flex flex-row-reverse w-full items-center gap-2 px-2 py-1.5 rounded-sm text-sm transition
-                                            ${currentPathname === nav.url ? "bg-sky-100 font-semibold" : ""}
+                                            ${choiceNav === nav.idScrollEffect ? "bg-sky-100 font-semibold" : ""}
                                         `}
                                     >
                                         <nav.Icon className="h-4 w-4 text-sky-600" />
