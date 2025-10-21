@@ -32,7 +32,7 @@ const steps = [
 
 export const HowToUseSection = () => {
     return(
-        <WrapperSection idSection="how-to-use" height="h-screen">
+        <WrapperSection idSection="how-to-use" height="min-h-fit h-screen" padding="py-4">
             <div className="flex flex-col items-center justify-center mx-auto container p-4">
                 <h2 className="text-3xl md:text-4xl font-bold text-center text-secondary mb-12">
                     Como acessar?
