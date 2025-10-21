@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export const HomeSection = () => {
     return (
-     <WrapperSection colorBg="bg-gradient-to-t from-sky-200 to-sky-500" margin="mt-20" height="h-[calc(100vh-80px)]" idSection="home">    
+     <WrapperSection colorBg="bg-gradient-to-t from-sky-200 to-sky-500" margin="mt-20" height="h-[calc(100vh-80px)]" idSection="">    
         <div className="flex flex-col items-center text-center animate-fade-in ">
             <Image 
                 src={LogoRFK} 
