@@ -37,6 +37,7 @@
 }
 
 @theme inline {
+  --breakpoint-xs: 440px;
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --font-sans: var(--font-geist-sans);

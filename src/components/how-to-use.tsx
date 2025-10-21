@@ -44,11 +44,11 @@ export const HowToUseSection = () => {
                             className="p-7 border-primary/15 hover:-translate-y-2 hover:shadow-md hover:shadow-primary/20 transition-all duration-300 animate-fade-in"
                             style={{ animationDelay: `${index * 100}ms` }}
                         >
-                            <div className="flex gap-4">
+                            <div className="flex flex-col items-center md:flex-row gap-4">
                                 <p className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xl font-bold">{step.step}</p>
-                                <div className="flex-1 flex items-center gap-3">
-                                    <step.icon className="w-6 h-6 text-primary" />
-                                    <p className="text-lg text-foreground">
+                                <div className="flex-1 flex flex-col sm:flex-row items-center gap-3 ">
+                                    <step.icon className="w-6 h-6 text-primary flex-shrink-0" />
+                                    <p className="text-lg text-foreground text-center md:text-start">
                                         {step.text}
                                     </p>
                                 </div>
