@@ -1,5 +1,5 @@
 "use client"
-import { AboutSection, Header, HomeSection } from "@/components";
+import { AboutSection, Header, HomeSection, HowToUseSection } from "@/components";
 import { useEffect } from "react";
 
 
@@ -31,7 +31,7 @@ export default function Home() {
         <Header/>
         <HomeSection/>{/* Sessão Home*/}
         <AboutSection/>{/* Sobre*/}
-        
+        <HowToUseSection/> {/* Sessão de como usar */}
     </div>
   );
 }

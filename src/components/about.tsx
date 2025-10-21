@@ -1,6 +1,6 @@
 import { BookOpen, Search, Users, Brain} from "lucide-react";
-import { Card } from "./ui/card";
 import { WrapperSection } from "./wrapper-section";
+import { Card } from "./ui/card";
 
 const cardInfo = [
         {
