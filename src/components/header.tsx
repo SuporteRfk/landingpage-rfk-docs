@@ -3,7 +3,6 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import {House, CircleQuestionMark, MousePointer, BrainCircuit} from "lucide-react";
 import { Sling as Hamburger } from 'hamburger-react';
 import LogoRfkDocs from "../../public/bookStack.svg";
-import { usePathname } from 'next/navigation';
 import { useState } from "react";
 import Image from "next/image";
 
