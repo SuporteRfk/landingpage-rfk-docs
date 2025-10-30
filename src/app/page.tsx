@@ -1,18 +1,36 @@
-import { WrapperSection } from "@/components/wrapper-section";
+"use client"
+import { AboutSection, Header, HomeSection } from "@/components";
+import { useEffect } from "react";
 
-import { Button } from "@/components/ui/button";
-import { Header } from "@/components/header";
 
-import Image from "next/image";
-import { HomeSection } from "@/components/home";
 
 export default function Home() {
-  return (
+    const path = window.location.pathname.replace("/", "");
+    const map: Record<string, string> = {
+        "": "home",
+        "sobre": "about",
+        "como-usar": "how-to-use",
+        "ai-docs": "agent-ai-docs"
+    };
+
+    const id = map[path];
+    
+    useEffect(() => {
+        if (id) {
+            const section = document.getElementById(id);
+            if (section) {
+                setTimeout(() => section.scrollIntoView({ behavior: "smooth" }), 100);
+            }
+        }
+    }, []);
+    
+  
+    return (
     <div className="font-sans bg-slate-300">
+        <div id="home" className="absolute top-0"/>
         <Header/>
-        {/* Hero Section */}
-        <HomeSection/>
-        
+        <HomeSection/>{/* Sessão Home*/}
+        <AboutSection/>{/* Sobre*/}
         
     </div>
   );
