@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RFK DOCS
 
-## Getting Started
+## 📘 Visão Geral
 
-First, run the development server:
+ É um portal desenvolvido para apresentar e disponibilizar aos usuários todas as documentações e informações relacionadas aos sistemas e projetos do Grupo RFK, incluindo o **site Hub IA** e demais iniciativas internas relacionadas as documentações dos processos interno da empresa.  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+## Sobre repositório
+
+Este repositório contém uma landing/documentação com seções como **Início**, **Sobre**, **Como usar** e **AI Docs**, com navegação por âncoras e componentes reutilizáveis de UI.
+
+### Principais recursos
+- ⚡️ Next.js (App Router) com Turbopack (`dev` e `build`)
+- 🎨 Tailwind CSS v4 (tokens e design via CSS com `oklch`)
+- 🧩 TypeScript
+- 🖼️ Ícones com `lucide-react`
+- 🍔 Menu hambúrguer com `hamburger-react`
+- 🧱 ShadCN UI
+
+
+
+## 🗂️ Estrutura de Pastas
+O projeto segue uma arquitetura modular, organizada por componentes reutilizáveis, com foco em clareza e escalabilidade. 
+
+```
+src/
+├─ app/                  # App Router (layout.tsx, page.tsx, not-found.tsx, favicon.ico)
+├─ components/           # Seções e componentes da página
+│  ├─ about.tsx
+│  ├─ ai-docs.tsx
+│  ├─ footer.tsx
+│  ├─ header.tsx
+│  ├─ home.tsx
+│  ├─ how-to-use.tsx
+│  ├─ wrapper-section.tsx
+│  └─ ui/                # Primitivos de UI
+│     ├─ button.tsx
+│     ├─ card.tsx
+│     ├─ dropdown-menu.tsx
+│     └─ index.tsx
+├─ lib/
+│  └─ utils.ts
+└─ style/
+   └─ global.css
+
+public/                  # Assets estáticos
+next.config.ts           # Configurações do Next.js
+tsconfig.json            # Configurações do TypeScript
+postcss.config.mjs       # Configuração do PostCSS/Tailwind
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Como Rodar Localmente
 
-## Learn More
+### Pré‑requisitos
+- Node.js **20.x** (LTS)
+- **npm** (padrão deste projeto)
 
-To learn more about Next.js, take a look at the following resources:
+### Passos
+```bash
+# 1) Instalar dependências
+npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# 2) Rodar em desenvolvimento
+npm run dev
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# 3) Build de produção
+npm run build
 
-## Deploy on Vercel
+# 4) Iniciar servidor de produção
+npm start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+> Por padrão o dev server roda em `http://localhost:3000`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+## 🧪 Scripts disponíveis
+
+- `npm run dev` — inicia o dev server com **Turbopack**
+- `npm run build` — build de produção com **Turbopack**
+- `npm start` — inicia o servidor de produção
+
+
+
+
+## 👨‍💻 **Autor**
+Desenvolvido por [Thiago Kalac](https://github.com/thiagoKalac)
+
+
+
