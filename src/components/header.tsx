@@ -47,7 +47,7 @@ export const Header = () => {
 
     return (
         <header id="home" className="fixed top-0 z-50 w-full h-20 shadow border-b border-sky-500 bg-white/30 backdrop-blur-lg">
-            <div className="h-full container mx-auto flex justify-between items-center px-4 md:px-0">
+            <div className="h-full container mx-auto flex justify-between items-center px-4">
                 <div className="p-4 flex gap-2 bg-sky-300/20 rounded-sm shadow-inner shadow-sky-200">
                     <Image src={LogoRfkDocs} alt="logo"/>
                     <h1 className="font-bold text-sky-950">RFK Docs</h1>
