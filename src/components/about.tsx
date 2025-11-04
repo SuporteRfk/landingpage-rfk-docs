@@ -40,7 +40,7 @@ export const AboutSection = () => {
                                 É um <span className="text-primary font-bold">portal interno</span> com toda a documentação da empresa: guias de processos, 
                                 tutoriais dos nossos sistemas ERP, passo a passo para solicitações, formulários, manuais e muito mais.
                                 <br /><br />
-                                Tudo <span className="text-primary font-bold">organizado, pesquisável e atualizado</span> pela equipe de TI e gestores de cada área!tran
+                                Tudo <span className="text-primary font-bold">organizado, pesquisável e atualizado</span> pela equipe de TI e gestores de cada área!
                             </p>
                         </div>
                     </div>
