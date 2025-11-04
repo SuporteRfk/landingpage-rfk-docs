@@ -12,7 +12,10 @@ export const HomeSection = () => {
             <Image 
                 src={LogoRFK} 
                 alt="Grupo RFK Logo" 
-                className="h-full max-h-72 w-fit object-cover"
+                className="object-contain h-auto w-auto max-h-72"
+                width={600}
+                height={400}
+                priority
             />
             <div className="space-y-4 max-w-4xl">
                 <h2 className="text-3xl md:text-6xl font-bold text-gray-700 leading-tight flex items-center justify-center gap-4">
@@ -28,7 +31,7 @@ export const HomeSection = () => {
                 className="mt-6"
               >
                 <a href="https://documentacao.rfk.ind.br/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                  <Image src={BookRfkDocs}  alt="BookStack" className="w-5 h-5" />
+                  <Image src={BookRfkDocs}  alt="BookStack" className="w-5 h-5" priority/>
                   <span className="hidden md:block">ACESSAR PLATAFORMA DE DOCUMENTAÇÃO</span>
                   <span className="md:hidden">ACESSAR DOCUMENTAÇÃO</span>
                 </a>
