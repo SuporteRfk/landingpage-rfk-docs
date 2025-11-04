@@ -11,6 +11,10 @@ export const Footer = () => {
                         src={grupoRfkLogoWhite} 
                         alt="Grupo RFK Logo" 
                         className="w-fit h-20 mx-auto"
+                        width={250}
+                        height={80}
+                        loading="lazy"
+                        decoding="async"
                     />
                     <p className="text-white/80">
                         Desenvolvido pela Time de T.I - Refriko.
